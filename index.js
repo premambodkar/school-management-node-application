@@ -6,10 +6,6 @@ const school = require('./school.js');
 
 app.use(express.static('static'));
 
-app.get('/', (req, res) => {
-  res.sendFile(path.resolve('pages/index.html'));
-});
-
 app.use('/', school);
 
 app.listen(port, () => {
